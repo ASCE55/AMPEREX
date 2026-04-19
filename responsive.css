@@ -1,0 +1,65 @@
+/* Tablets */
+@media (max-width: 1024px) {
+  h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+  h2 { font-size: clamp(1.8rem, 3.5vw, 2.5rem); }
+  
+  .container {
+    padding: 0 1.5rem;
+  }
+  
+  .glass-card {
+    padding: 2rem;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  section {
+    padding: 6rem 0;
+  }
+  
+  .page-header {
+    padding: 10rem 0 4rem;
+  }
+  
+  /* Navbar adjustments */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: var(--bg-surface);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition-smooth);
+    border-left: var(--glass-border);
+    box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+  }
+  
+  .nav-links.active {
+    right: 0;
+  }
+  
+  .menu-toggle {
+    display: block;
+    z-index: 101;
+  }
+  
+  /* Footer adjustments */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  /* Custom Cursor - Disable on touch devices */
+  @media (pointer: coarse) {
+    body, a, .btn, button {
+      cursor: auto;
+    }
+    .cursor-dot, .cursor-outline {
+      display: none;
+    }
+  }
+}

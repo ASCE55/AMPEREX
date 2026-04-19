@@ -1,0 +1,156 @@
+/* Preloader Animations */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 10px rgba(0, 240, 255, 0.2); }
+  100% { box-shadow: 0 0 30px rgba(0, 240, 255, 0.8), inset 0 0 15px rgba(0, 240, 255, 0.4); }
+}
+
+/* Background Animations */
+@keyframes gridMove {
+  0% { transform: perspective(600px) rotateX(60deg) translateY(-100px) translateZ(-200px); }
+  100% { transform: perspective(600px) rotateX(60deg) translateY(0) translateZ(-200px); }
+}
+
+@keyframes breathe {
+  0% { opacity: 0.5; transform: translateX(-50%) scaleY(1); }
+  100% { opacity: 1; transform: translateX(-50%) scaleY(1.2); }
+}
+
+/* Float Animations for 3D Components */
+@keyframes float1 {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-30px) rotate(8deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+@keyframes float2 {
+  0% { transform: translateY(0) rotate(0deg) scale(1); }
+  50% { transform: translateY(-40px) rotate(-8deg) scale(1.08); }
+  100% { transform: translateY(0) rotate(0deg) scale(1); }
+}
+
+@keyframes float3 {
+  0% { transform: translateY(0) rotateX(0) rotateY(0); }
+  50% { transform: translateY(-25px) rotateX(15deg) rotateY(15deg); }
+  100% { transform: translateY(0) rotateX(0) rotateY(0); }
+}
+
+/* Scroll Reveals (Fade + Slide Up) */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-left.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-right.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Staggered Delays for Cards/Elements */
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-400 { transition-delay: 0.4s; }
+.delay-500 { transition-delay: 0.5s; }
+
+/* Custom Cursor (RGB Resistor) */
+@keyframes rgbGlow {
+  0% { stroke: #FF0000; filter: drop-shadow(0 0 8px #FF0000); }
+  33% { stroke: #00FF00; filter: drop-shadow(0 0 8px #00FF00); }
+  66% { stroke: #0000FF; filter: drop-shadow(0 0 8px #0000FF); }
+  100% { stroke: #FF0000; filter: drop-shadow(0 0 8px #FF0000); }
+}
+
+.cursor-resistor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 100000;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  width: 40px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cursor-resistor svg {
+  width: 100%;
+  height: 100%;
+}
+
+.cursor-resistor svg path {
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  animation: rgbGlow 3s linear infinite;
+}
+
+.cursor-resistor.hover-active {
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+/* Energy Streaks */
+.streak {
+  position: absolute;
+  background: linear-gradient(90deg, transparent, var(--accent-cyber), #fff, var(--accent-cyber), transparent);
+  height: 2px;
+  width: 150px;
+  opacity: 0;
+  animation: shoot 2.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  box-shadow: 0 0 10px var(--accent-cyber);
+  pointer-events: none;
+}
+
+@keyframes shoot {
+  0% { transform: translateX(-150px); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateX(100vw); opacity: 0; }
+}
+
+/* Glowing text */
+.glow-text {
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.3), 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Gallery Zoom Fixes (Used in gallery.html) */
+.gallery-item img, .gallery-item svg {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gallery-item:hover svg {
+  transform: scale(1.1);
+}
