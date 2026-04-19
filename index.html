@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EEE Department | Engineering the Future</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Immersive Background System -->
+  <div id="canvas-container"></div>
+  <div class="bg-grid"></div>
+  <div class="energy-pulse"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 0L35 15H25V40L5 20H15V0H20Z" fill="url(#paint_logo)"/>
+          <path d="M12 25H28M8 30H32" stroke="#00F0FF" stroke-width="2" stroke-linecap="round"/>
+          <defs>
+            <linearGradient id="paint_logo" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#00F0FF"/>
+              <stop offset="1" stop-color="#FF003C"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        EEE
+      </a>
+      
+      <button class="menu-toggle">&#9776;</button>
+      
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faculty.html">Faculty</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" style="min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding-top: 120px; padding-bottom: 4rem;">
+    <div class="container" style="z-index: 10;">
+      <h3 class="text-gradient reveal delay-100" style="font-family: var(--font-mono); font-size: 1.2rem; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 1.5rem;">The Frontier of Innovation</h3>
+      <h1 class="glow-text reveal delay-200" style="margin-bottom: 2rem;">Electrical & Electronics<br>Engineering</h1>
+      <p class="reveal delay-300" style="max-width: 600px; margin: 0 auto 3rem;">Architecting sustainable power networks, quantum circuitry, and next-generation robotics. We don't just study the future—we build it.</p>
+      
+      <div class="hero-buttons reveal delay-400" style="display: flex; gap: 1.5rem; justify-content: center;">
+        <a href="about.html" class="btn btn-primary">Discover More</a>
+        <a href="contact.html" class="btn btn-outline">Join the Future</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Overview -->
+  <section class="about-summary">
+    <div class="container">
+      <div class="glass-card reveal" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+        <div class="about-content">
+          <h2 style="margin-bottom: 1.5rem;">Beyond the <span class="text-gradient">Circuit Board</span></h2>
+          <p>Our department is a hub of technological advancement, merging traditional electrical theories with cutting-edge electronics and AI integration.</p>
+          <p>Equipped with state-of-the-art facilities, we prepare engineers to tackle global energy crises and pioneer smart grid infrastructures.</p>
+          <a href="about.html" class="btn btn-outline" style="margin-top: 2rem; padding: 0.8rem 2rem;">Read Full Vision</a>
+        </div>
+        <div class="about-stats" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+          <div style="border-left: 2px solid var(--accent-cyber); padding-left: 1.5rem;">
+            <h1 class="text-gradient">98%</h1>
+            <p style="font-size: 0.9rem; margin:0;">Placement Rate</p>
+          </div>
+          <div style="border-left: 2px solid var(--accent-cyber); padding-left: 1.5rem;">
+            <h1 class="text-gradient">15+</h1>
+            <p style="font-size: 0.9rem; margin:0;">Advanced Labs</p>
+          </div>
+          <div style="border-left: 2px solid var(--accent-cyber); padding-left: 1.5rem;">
+            <h1 class="text-gradient">40+</h1>
+            <p style="font-size: 0.9rem; margin:0;">Expert Faculty</p>
+          </div>
+          <div style="border-left: 2px solid var(--accent-cyber); padding-left: 1.5rem;">
+            <h1 class="text-gradient">200+</h1>
+            <p style="font-size: 0.9rem; margin:0;">Research Papers</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Programs -->
+  <section class="programs">
+    <div class="container">
+      <h2 class="reveal" style="text-align: center; margin-bottom: 4rem;">Core <span class="text-gradient">Specializations</span></h2>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+        
+        <div class="glass-card reveal-left delay-100">
+          <svg style="width: 48px; height: 48px; margin-bottom: 1.5rem; filter: drop-shadow(0 0 10px var(--accent-cyber-glow));" viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyber)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+          <h3>Power Systems</h3>
+          <p style="margin-top: 1rem; font-size: 0.95rem;">Designing robust power generation, transmission, and smart distribution networks for modern infrastructure.</p>
+        </div>
+
+        <div class="glass-card reveal delay-200">
+          <svg style="width: 48px; height: 48px; margin-bottom: 1.5rem; filter: drop-shadow(0 0 10px var(--accent-cyber-glow));" viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyber)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+          <h3>VLSI & Embedded</h3>
+          <p style="margin-top: 1rem; font-size: 0.95rem;">Architecting micro-controllers, IoT devices, and high-performance computing silicon chips.</p>
+        </div>
+
+        <div class="glass-card reveal-right delay-300">
+          <svg style="width: 48px; height: 48px; margin-bottom: 1.5rem; filter: drop-shadow(0 0 10px var(--accent-cyber-glow));" viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyber)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path><path d="M2 12h20"></path></svg>
+          <h3>Control Systems</h3>
+          <p style="margin-top: 1rem; font-size: 0.95rem;">Developing autonomous navigation algorithms, industrial automation, and sophisticated robotics.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" style="margin-bottom: 1rem;">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 24px; height: 24px;">
+              <path d="M20 0L35 15H25V40L5 20H15V0H20Z" fill="url(#paint_logo_footer)"/>
+              <defs>
+                <linearGradient id="paint_logo_footer" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#00F0FF"/>
+                  <stop offset="1" stop-color="#FF003C"/>
+                </linearGradient>
+              </defs>
+            </svg>
+            EEE
+          </a>
+          <p>Empowering the next generation of electrical innovators and electronics engineers.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="faculty.html">Faculty</a></li>
+            <li><a href="team.html">Our Team</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul class="footer-links">
+            <li><a href="events.html">Events</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Social</h4>
+          <ul class="footer-links">
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 EEE Department. Engineered for the future.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/cursor.js"></script>
+</body>
+</html>

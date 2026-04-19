@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | EEE Department</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Background Systems -->
+  <div id="canvas-container"></div>
+  <div class="bg-grid"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 0L35 15H25V40L5 20H15V0H20Z" fill="url(#paint_logo)"/>
+          <path d="M12 25H28M8 30H32" stroke="#00F0FF" stroke-width="2" stroke-linecap="round"/>
+          <defs>
+            <linearGradient id="paint_logo" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#00F0FF"/>
+              <stop offset="1" stop-color="#FF003C"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        EEE
+      </a>
+      <button class="menu-toggle">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="faculty.html">Faculty</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="container">
+      <h1 class="glow-text reveal">About <span class="text-gradient">EEE</span></h1>
+      <p class="reveal delay-100">Pioneering the next era of electrical systems, embedded technologies, and power intelligence.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="glass-card reveal">
+        <h2 style="margin-bottom: 2rem;">Vision & Mission</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem;">
+          <div>
+            <h3 class="text-gradient" style="margin-bottom: 1rem;">Our Vision</h3>
+            <p>To be a globally recognized center of excellence in Electrical and Electronics Engineering, producing trailblazers capable of solving complex technological challenges and advancing sustainable energy solutions for a better tomorrow.</p>
+          </div>
+          <div>
+            <h3 class="text-gradient" style="margin-bottom: 1rem;">Our Mission</h3>
+            <ul style="list-style: none; padding: 0;">
+              <li style="margin-bottom: 1rem; position: relative; padding-left: 1.5rem;">
+                <span style="position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background: var(--accent-cyber); border-radius: 50%;"></span>
+                Impart rigorous, future-ready technical education combined with practical engineering skills.
+              </li>
+              <li style="margin-bottom: 1rem; position: relative; padding-left: 1.5rem;">
+                <span style="position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background: var(--accent-cyber); border-radius: 50%;"></span>
+                Foster an ecosystem of cutting-edge research, innovation, and industry collaboration.
+              </li>
+              <li style="margin-bottom: 1rem; position: relative; padding-left: 1.5rem;">
+                <span style="position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background: var(--accent-cyber); border-radius: 50%;"></span>
+                Cultivate ethical leaders equipped to deploy technology for the holistic development of society.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 EEE Department. Engineered for the future.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/cursor.js"></script>
+</body>
+</html>

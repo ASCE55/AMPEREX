@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events | EEE Department</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    .timeline {
+      position: relative;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      background: var(--accent-cyber);
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -2px;
+      border-radius: 4px;
+      box-shadow: 0 0 15px var(--accent-cyber-glow);
+    }
+    .timeline-container {
+      padding: 10px 40px;
+      position: relative;
+      background: inherit;
+      width: 50%;
+    }
+    .timeline-container::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      right: -10px;
+      background-color: var(--bg-surface);
+      border: 4px solid var(--accent-cyber);
+      top: 30px;
+      border-radius: 50%;
+      z-index: 1;
+      box-shadow: 0 0 10px var(--accent-cyber-glow);
+    }
+    .left { left: 0; }
+    .right { left: 50%; }
+    .right::after { left: -10px; }
+    @media screen and (max-width: 768px) {
+      .timeline::after { left: 31px; }
+      .timeline-container { width: 100%; padding-left: 70px; padding-right: 25px; }
+      .timeline-container::after { left: 21px; }
+      .right { left: 0%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Systems -->
+  <div id="canvas-container"></div>
+  <div class="bg-grid"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 0L35 15H25V40L5 20H15V0H20Z" fill="url(#paint_logo)"/>
+          <path d="M12 25H28M8 30H32" stroke="#00F0FF" stroke-width="2" stroke-linecap="round"/>
+          <defs>
+            <linearGradient id="paint_logo" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#00F0FF"/>
+              <stop offset="1" stop-color="#FF003C"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        EEE
+      </a>
+      <button class="menu-toggle">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faculty.html">Faculty</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="events.html" class="active">Events</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="container">
+      <h1 class="glow-text reveal">Timeline of <span class="text-gradient">Innovation</span></h1>
+      <p class="reveal delay-100">Hackathons, symposiums, and workshops pushing the boundaries of engineering.</p>
+    </div>
+  </header>
+
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="timeline">
+        
+        <div class="timeline-container left reveal-left delay-100">
+          <div class="glass-card" style="padding: 2rem;">
+            <div style="font-family: var(--font-mono); color: var(--accent-cyber); margin-bottom: 0.5rem;">March 2026</div>
+            <h3>Electro-Hack 3.0</h3>
+            <p style="margin-top: 1rem;">A 48-hour hardware and IoT hackathon. Build smart devices and autonomous drones.</p>
+          </div>
+        </div>
+
+        <div class="timeline-container right reveal-right delay-200">
+          <div class="glass-card" style="padding: 2rem;">
+            <div style="font-family: var(--font-mono); color: var(--accent-cyber); margin-bottom: 0.5rem;">May 2026</div>
+            <h3>National Symposium: GRID</h3>
+            <p style="margin-top: 1rem;">Presentations on renewable energy integration and quantum circuit design by industry leaders.</p>
+          </div>
+        </div>
+
+        <div class="timeline-container left reveal-left delay-300">
+          <div class="glass-card" style="padding: 2rem;">
+            <div style="font-family: var(--font-mono); color: var(--accent-cyber); margin-bottom: 0.5rem;">August 2026</div>
+            <h3>VLSI Design Workshop</h3>
+            <p style="margin-top: 1rem;">Hands-on training session on silicon chip architecture and embedded C programming.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 EEE Department. Engineered for the future.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/cursor.js"></script>
+</body>
+</html>

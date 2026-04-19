@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faculty | EEE Department</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Background Systems -->
+  <div id="canvas-container"></div>
+  <div class="bg-grid"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 0L35 15H25V40L5 20H15V0H20Z" fill="url(#paint_logo)"/>
+          <path d="M12 25H28M8 30H32" stroke="#00F0FF" stroke-width="2" stroke-linecap="round"/>
+          <defs>
+            <linearGradient id="paint_logo" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#00F0FF"/>
+              <stop offset="1" stop-color="#FF003C"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        EEE
+      </a>
+      <button class="menu-toggle">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faculty.html" class="active">Faculty</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="container">
+      <h1 class="glow-text reveal">Our <span class="text-gradient">Architects</span></h1>
+      <p class="reveal delay-100">The brilliant minds engineering the curriculum and guiding the next generation.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem;">
+        
+        <!-- Faculty Card 1 -->
+        <div class="glass-card reveal delay-100" style="text-align: center; padding: 2rem;">
+          <div style="width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, #111, #222); border: 2px solid var(--accent-cyber); margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; overflow: hidden; box-shadow: 0 0 20px rgba(0,240,255,0.2);">
+            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          </div>
+          <h3 style="margin-bottom: 0.5rem; font-size: 1.5rem;">Dr. Alan Turing</h3>
+          <p class="text-gradient" style="font-weight: 600; font-size: 0.9rem; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 1rem;">Head of Department</p>
+          <p style="font-size: 0.9rem;">Specialization: Quantum Computing & Advanced Control Systems</p>
+        </div>
+
+        <!-- Faculty Card 2 -->
+        <div class="glass-card reveal delay-200" style="text-align: center; padding: 2rem;">
+          <div style="width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, #111, #222); border: 2px solid var(--accent-cyber); margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; overflow: hidden; box-shadow: 0 0 20px rgba(0,240,255,0.2);">
+            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          </div>
+          <h3 style="margin-bottom: 0.5rem; font-size: 1.5rem;">Dr. Ada Lovelace</h3>
+          <p class="text-gradient" style="font-weight: 600; font-size: 0.9rem; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 1rem;">Professor</p>
+          <p style="font-size: 0.9rem;">Specialization: VLSI Design & Micro-architecture</p>
+        </div>
+
+        <!-- Faculty Card 3 -->
+        <div class="glass-card reveal delay-300" style="text-align: center; padding: 2rem;">
+          <div style="width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, #111, #222); border: 2px solid var(--accent-cyber); margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; overflow: hidden; box-shadow: 0 0 20px rgba(0,240,255,0.2);">
+            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          </div>
+          <h3 style="margin-bottom: 0.5rem; font-size: 1.5rem;">Prof. Nikola Tesla</h3>
+          <p class="text-gradient" style="font-weight: 600; font-size: 0.9rem; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 1rem;">Associate Professor</p>
+          <p style="font-size: 0.9rem;">Specialization: High Voltage Engineering & Smart Grids</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 EEE Department. Engineered for the future.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/cursor.js"></script>
+</body>
+</html>
